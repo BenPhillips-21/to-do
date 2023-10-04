@@ -11,26 +11,33 @@ const SideBar = () => {
                     <ul className="nav flex-column">
                         <li className="nav-item">
                             <a className="nav-link active" href="#">
-                                All Tasks
+                                A - All Tasks
                             </a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="#">
-                                Today
+                                T - Today
                             </a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="#">
-                                Next 7 Days
+                                N - Next 7 Days
                             </a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="#">
-                                Important
+                                I - Important
                             </a>
                         </li>
                     </ul>
-                {/* </div> */}
+                    <h3>Projects</h3>
+                    <ul className="nav flex-column">
+                        <li className="nav-item">
+                            <a className="nav-link active" href="#">
+                                + - Add Project
+                            </a>
+                        </li>
+                        </ul>
             </nav>
         </div>
     </div>

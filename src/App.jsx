@@ -25,6 +25,11 @@ function add(content) {
   nav(`/item/${id}`)
 }
 
+const removeItem = (indexToRemove) => {
+  const updatedList = list.filter((item, index) => index !== indexToRemove);
+  setList(updatedList);
+};
+
 function ShowItemWrapper() {
   const { id } = useParams()
   return <ShowItem list={list[id]} />
@@ -34,7 +39,7 @@ function ShowItemWrapper() {
   <SideBar />
       <NavBar />
       <Routes>
-        <Route path="/" element={<TodoList list={list}/>} />
+        <Route path="/" element={<TodoList list={list} removeItem={removeItem}/>} />
         <Route path="/add" element={<AddTodo add={add} />} />
         <Route path="/item">
           <Route path=":id" element={<ShowItemWrapper/> } />
