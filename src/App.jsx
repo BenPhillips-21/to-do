@@ -1,14 +1,17 @@
 import React, { useState } from 'react'
 import { BrowserRouter, Routes, Route, useNavigate, useParams } from "react-router-dom";
-import NavBar from "/home/ben/projects/js/to-do/src/components/NavBar.jsx"
-import TodoList from "/home/ben/projects/js/to-do/src/components/ToDoList.jsx"
-import AddTodo from "/home/ben/projects/js/to-do/src/components/AddToDo.jsx"
-import ShowItem from "/home/ben/projects/js/to-do/src/components/ShowItem.jsx"
+import NavBar from "./components/NavBar.jsx"
+import SideBar from "./components/SideBar.jsx"
+import TodoList from "./components/ToDoList.jsx"
+import AddTodo from "./components/AddToDo.jsx"
+import ShowItem from "./components/ShowItem.jsx"
+import './App.css'
 
 const seedList = [
   { content: "Feed the dog"},
   { content: "Do Homework"},
-  { content: "Learn Portugese"}
+  { content: "Learn Portugese"},
+  { content: "Poo"}
 ]
 
 const App = () => {
@@ -28,6 +31,7 @@ function ShowItemWrapper() {
 }
 
   return ( <>
+  <SideBar />
       <NavBar />
       <Routes>
         <Route path="/" element={<TodoList list={list}/>} />
@@ -37,6 +41,7 @@ function ShowItemWrapper() {
         </Route>
         <Route path='*' element={<h3>Error 404 - Page not found</h3>}/>
       </Routes>
+      
       </>
   );
 };
