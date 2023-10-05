@@ -14,10 +14,12 @@ const App = () => {
 
 const [task, setTask] = useState([
   {
+  id: 1,
   title: 'Milk the cow',
   description: 'Tug HARD!'
 },
 {
+  id: 2,
   title: 'Milk the goat',
   description: 'mmmm tuggy tuggy'
 }
@@ -25,6 +27,7 @@ const [task, setTask] = useState([
 
 const add = (content) => {
   const newItem = (content)
+  newItem.id = task.length + 1
   setTask([...task, newItem])
   // nav(`/item/${id}`)
   console.log(task)
