@@ -5,6 +5,17 @@
   text-align: center;
 }
 
+.add-container {
+  margin-top: 50px;
+  margin-left: 350px;
+  width: 50%;
+}
+
+.add-container h6 {
+  display: flex;
+  align-items: flex-start;
+}
+
 .list-container {
   background-color: purple;
   margin-top: 40px;

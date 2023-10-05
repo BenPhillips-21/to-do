@@ -12,18 +12,23 @@ const App = () => {
   let nav = useNavigate()
 //   const [list, setList] = useState(seedList)
 
-const [task, setTask] = useState([{
-  id: 1,
+const [task, setTask] = useState([
+  {
   title: 'Milk the cow',
   description: 'Tug HARD!'
-}])
+},
+{
+  title: 'Milk the goat',
+  description: 'mmmm tuggy tuggy'
+}
+])
 
-// function add(content) {
-//   const id = list.length
-//   const newItem = { content }
-//   setList([...list, newItem])
-//   nav(`/item/${id}`)
-// }
+const add = (content) => {
+  const newItem = (content)
+  setTask([...task, newItem])
+  // nav(`/item/${id}`)
+  console.log(task)
+}
 
 const removeTask = (taskId) => {
   const updatedTasks = task.filter((task) => task.id !== taskId);
@@ -40,7 +45,7 @@ const removeTask = (taskId) => {
       <NavBar />
       <Routes>
         <Route path="/" element={<TodoList taskList={task} removeTask={removeTask}/>} />
-        {/* <Route path="/add" element={<AddTodo add={add} />} /> */}
+        <Route path="/add" element={<AddTodo add={add} task={task} setTask={setTask} />} />
         
         <Route path="/item">
           {/* <Route path=":id" element={<ShowItemWrapper/> } /> */}
