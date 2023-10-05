@@ -7,46 +7,47 @@ import AddTodo from "./components/AddToDo.jsx"
 import ShowItem from "./components/ShowItem.jsx"
 import './App.css'
 
-const seedList = [
-  { content: "Feed the dog"},
-  { content: "Do Homework"},
-  { content: "Learn Portugese"},
-  { content: "Poo"}
-]
 
 const App = () => {
   let nav = useNavigate()
-  const [list, setList] = useState(seedList)
+//   const [list, setList] = useState(seedList)
 
-function add(content) {
-  const id = list.length
-  const newItem = { content }
-  setList([...list, newItem])
-  nav(`/item/${id}`)
-}
+const [task, setTask] = useState([{
+  id: 1,
+  title: 'Milk the cow',
+  description: 'Tug HARD!'
+}])
 
-const removeItem = (indexToRemove) => {
-  const updatedList = list.filter((item, index) => index !== indexToRemove);
-  setList(updatedList);
+// function add(content) {
+//   const id = list.length
+//   const newItem = { content }
+//   setList([...list, newItem])
+//   nav(`/item/${id}`)
+// }
+
+const removeTask = (taskId) => {
+  const updatedTasks = task.filter((task) => task.id !== taskId);
+  setTask(updatedTasks);
 };
 
-function ShowItemWrapper() {
-  const { id } = useParams()
-  return <ShowItem list={list[id]} />
-}
+// function ShowItemWrapper() {
+//   const { id } = useParams()
+//   return <ShowItem list={list[id]} />
+// }
 
   return ( <>
   <SideBar />
       <NavBar />
       <Routes>
-        <Route path="/" element={<TodoList list={list} removeItem={removeItem}/>} />
-        <Route path="/add" element={<AddTodo add={add} />} />
+        <Route path="/" element={<TodoList taskList={task} removeTask={removeTask}/>} />
+        {/* <Route path="/add" element={<AddTodo add={add} />} /> */}
+        
         <Route path="/item">
-          <Route path=":id" element={<ShowItemWrapper/> } />
+          {/* <Route path=":id" element={<ShowItemWrapper/> } /> */}
         </Route>
         <Route path='*' element={<h3>Error 404 - Page not found</h3>}/>
       </Routes>
-      
+
       </>
   );
 };
