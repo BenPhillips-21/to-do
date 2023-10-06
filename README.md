@@ -1,8 +1,7 @@
-# React + Vite
+# Project: Todo List
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Simple Todo list website created as part of 'The Odin Project'. Revised how to use useState, filtering and mapping arrays, how to use dates in JS, react icons, importing and exporting modules and how to use props. 
 
-Currently, two official plugins are available:
+This is a desktop-only website and does not utilise local storage or a backend to store data.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Link to the website: https://to-do-list-chi-amber.vercel.app/
