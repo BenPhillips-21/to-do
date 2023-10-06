@@ -1,5 +1,7 @@
 import React from 'react'
 import { BsFillCheckCircleFill, BsFillPlusCircleFill } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
+
 
 
 const Today = ({ taskList, removeTask }) => {
@@ -44,6 +46,10 @@ return (
       ))}
     </ul>
     </div>
+    <Link id="addTaskButton" className="navvy" aria-current="page" to="/Add">
+          <BsFillPlusCircleFill />
+        </Link>
+        <p id="addTaskText">Add Task</p>
   </>
   )
 }

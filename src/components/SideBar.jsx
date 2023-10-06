@@ -17,18 +17,7 @@ const SideBar = () => {
                         <li className="nav-item">
                         <Link className="navbar-brand" to="/next"><BsFillCalendar2RangeFill />  Next 7 Days</Link>
                         </li>
-                        <li className="nav-item">
-                        <Link className="navbar-brand" to="/important"><BsFillExclamationCircleFill />  Important</Link>
-                        </li>
                     </ul>
-                    {/* <h3>Projects</h3>
-                    <ul className="nav flex-column">
-                        <li className="nav-item">
-                            <a className="nav-link active" href="#">
-                                + - Add Project
-                            </a>
-                        </li>
-                        </ul> */}
             </nav>
         </div>
     </div>

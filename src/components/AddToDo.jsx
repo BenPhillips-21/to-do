@@ -41,6 +41,7 @@ const AddToDo = ({ add, task }) => {
           <textarea
             type="text"
             name="title"
+            placeholder="Walk the dog"
             value={taskState.title}
             onChange={handleInputChange}
             rows="1"
@@ -50,9 +51,10 @@ const AddToDo = ({ add, task }) => {
           <textarea
             type="text"
             name="description"
+            placeholder="Take him to his favourite park"
             value={taskState.description}
             onChange={handleInputChange}
-            rows="1"
+            rows="4"
           />
           <h6>Due Date:</h6>
           <input
@@ -62,7 +64,7 @@ const AddToDo = ({ add, task }) => {
             onChange={handleDateChange}
           />
         </div>
-        <button className="btn btn-success mt-3">Add To List</button>
+        <button className="btn btn-black mt-3">Add To List</button>
       </form>
     </>
   );
