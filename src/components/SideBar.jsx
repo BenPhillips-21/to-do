@@ -1,35 +1,34 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { BsFillArchiveFill, BsFillCalendarEventFill, BsFillCalendar2RangeFill, BsFillExclamationCircleFill } from "react-icons/bs";
 
 const SideBar = () => {
   return (<>
     <div className="sidebar-container">
         <div className="row">
             <nav className="col-md-3 col-lg-2 d-md-block sidebar">
-                {/* <div className="position-sticky"> */}
-                <h3>Home</h3>
                     <ul className="nav flex-column">
                         <li className="nav-item">
-                        <Link className="navbar-brand" to="/">All Tasks</Link>
+                        <Link className="navbar-brand" to="/"><BsFillArchiveFill />All Tasks</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="navbar-brand" to="/Today">Today</Link>
+                            <Link className="navbar-brand" to="/Today"><BsFillCalendarEventFill />Today</Link>
                         </li>
                         <li className="nav-item">
-                        <Link className="navbar-brand" to="/next">Next 7 Days</Link>
+                        <Link className="navbar-brand" to="/next"><BsFillCalendar2RangeFill />Next 7 Days</Link>
                         </li>
                         <li className="nav-item">
-                        <Link className="navbar-brand" to="/important">Important</Link>
+                        <Link className="navbar-brand" to="/important"><BsFillExclamationCircleFill />Important</Link>
                         </li>
                     </ul>
-                    <h3>Projects</h3>
+                    {/* <h3>Projects</h3>
                     <ul className="nav flex-column">
                         <li className="nav-item">
                             <a className="nav-link active" href="#">
                                 + - Add Project
                             </a>
                         </li>
-                        </ul>
+                        </ul> */}
             </nav>
         </div>
     </div>

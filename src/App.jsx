@@ -17,7 +17,7 @@ const [task, setTask] = useState(
   [
   {
   title: 'Milk the cow',
-  description: 'Tug HARD!',
+  description: 'Tug HARD! TUG TUG TUG TUG TUG TUG TUG TUG TUG TUG TUG TUG',
   date: new Date('2023-10-11'),
 },
 {
@@ -27,7 +27,7 @@ const [task, setTask] = useState(
 },
 {
   title: 'bello',
-  description: 'bello',
+  description: 'bello bello bello bello ello bello bello bello',
   date: new Date('2023-10-10'),
 }
 ]
