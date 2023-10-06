@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { BrowserRouter, Routes, Route, useNavigate, useParams } from "react-router-dom";
-import { format, parse, addDays, differenceInDays } from 'date-fns';
 import NavBar from "./components/NavBar.jsx"
 import SideBar from "./components/SideBar.jsx"
 import TodoList from "./components/ToDoList.jsx"
+import Today from "./components/Today.jsx"
 import AddTodo from "./components/AddToDo.jsx"
 import ShowItem from "./components/ShowItem.jsx"
 import './App.css'
@@ -49,6 +49,7 @@ const removeTask = (taskIndex) => {
       <NavBar />
       <Routes>
         <Route path="/" element={<TodoList taskList={task} removeTask={removeTask}/>} />
+        <Route path="/today" element={<Today taskList={task} removeTask={removeTask}/>} />
         <Route path="/add" element={<AddTodo add={add} task={task} />} />
         
         <Route path="/item">

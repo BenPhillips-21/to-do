@@ -10,24 +10,16 @@ const SideBar = () => {
                 <h3>Home</h3>
                     <ul className="nav flex-column">
                         <li className="nav-item">
-                            <a className="nav-link active" href="#">
-                                A - All Tasks
-                            </a>
+                        <Link className="navbar-brand" to="/">All Tasks</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">
-                                T - Today
-                            </a>
+                            <Link className="navbar-brand" to="/Today">Today</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">
-                                N - Next 7 Days
-                            </a>
+                        <Link className="navbar-brand" to="/next">Next 7 Days</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">
-                                I - Important
-                            </a>
+                        <Link className="navbar-brand" to="/important">Important</Link>
                         </li>
                     </ul>
                     <h3>Projects</h3>
