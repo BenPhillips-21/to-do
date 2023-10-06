@@ -6,6 +6,7 @@ import TodoList from "./components/ToDoList.jsx"
 import Today from "./components/Today.jsx"
 import AddTodo from "./components/AddToDo.jsx"
 import ShowItem from "./components/ShowItem.jsx"
+import NextSevenDays from './components/NextSevenDays.jsx';
 import './App.css'
 
 
@@ -17,12 +18,17 @@ const [task, setTask] = useState(
   {
   title: 'Milk the cow',
   description: 'Tug HARD!',
-  date: new Date('2023-01-01'),
+  date: new Date('2023-10-11'),
 },
 {
   title: 'Milk the goat',
   description: 'mmmm tuggy tuggy',
   date: new Date(),
+},
+{
+  title: 'bello',
+  description: 'bello',
+  date: new Date('2023-10-10'),
 }
 ]
 )
@@ -50,6 +56,7 @@ const removeTask = (taskIndex) => {
       <Routes>
         <Route path="/" element={<TodoList taskList={task} removeTask={removeTask}/>} />
         <Route path="/today" element={<Today taskList={task} removeTask={removeTask}/>} />
+        <Route path="/next" element={<NextSevenDays taskList={task} removeTask={removeTask}/>} />
         <Route path="/add" element={<AddTodo add={add} task={task} />} />
         
         <Route path="/item">
