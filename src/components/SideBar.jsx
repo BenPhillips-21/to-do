@@ -9,16 +9,16 @@ const SideBar = () => {
             <nav className="col-md-3 col-lg-2 d-md-block sidebar">
                     <ul className="nav flex-column">
                         <li className="nav-item">
-                        <Link className="navbar-brand" to="/"><BsFillArchiveFill />All Tasks</Link>
+                        <Link className="navbar-brand" to="/"><BsFillArchiveFill />  All Tasks</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="navbar-brand" to="/Today"><BsFillCalendarEventFill />Today</Link>
+                            <Link className="navbar-brand" to="/Today"><BsFillCalendarEventFill />  Today</Link>
                         </li>
                         <li className="nav-item">
-                        <Link className="navbar-brand" to="/next"><BsFillCalendar2RangeFill />Next 7 Days</Link>
+                        <Link className="navbar-brand" to="/next"><BsFillCalendar2RangeFill />  Next 7 Days</Link>
                         </li>
                         <li className="nav-item">
-                        <Link className="navbar-brand" to="/important"><BsFillExclamationCircleFill />Important</Link>
+                        <Link className="navbar-brand" to="/important"><BsFillExclamationCircleFill />  Important</Link>
                         </li>
                     </ul>
                     {/* <h3>Projects</h3>

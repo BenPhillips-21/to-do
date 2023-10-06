@@ -36,7 +36,6 @@ const [task, setTask] = useState(
 const add = (content) => {
   const newItem = (content)
   setTask([...task, newItem])
-  // nav(`/item/${id}`)
   console.log(task)
 }
 
@@ -44,11 +43,6 @@ const removeTask = (taskIndex) => {
   const updatedTasks = task.filter((task, index) => index !== taskIndex);
   setTask(updatedTasks);
 };
-
-// function ShowItemWrapper() {
-//   const { id } = useParams()
-//   return <ShowItem list={list[id]} />
-// }
 
   return ( <>
   <SideBar />
@@ -58,10 +52,6 @@ const removeTask = (taskIndex) => {
         <Route path="/today" element={<Today taskList={task} removeTask={removeTask}/>} />
         <Route path="/next" element={<NextSevenDays taskList={task} removeTask={removeTask}/>} />
         <Route path="/add" element={<AddTodo add={add} task={task} />} />
-        
-        <Route path="/item">
-          {/* <Route path=":id" element={<ShowItemWrapper/> } /> */}
-        </Route>
         <Route path='*' element={<h3>Error 404 - Page not found</h3>}/>
       </Routes>
 

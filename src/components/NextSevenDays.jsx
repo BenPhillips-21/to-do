@@ -1,4 +1,5 @@
 import React from 'react'
+import { BsFillCheckCircleFill, BsFillPlusCircleFill } from 'react-icons/bs';
 
 const NextSevenDays = ({ taskList, removeTask }) => {
     const currentDate = new Date();
@@ -18,14 +19,19 @@ const NextSevenDays = ({ taskList, removeTask }) => {
 
   return (
     <>
+     <h1>Next Seven Days</h1>
     <div className="list-container">
       <ul>
         {filteredTasks.map ((filteredTasks, index) => (
           <li key={index}>
+            <div className="task-container">
           <h3 >{filteredTasks.title}</h3>
           <p>{filteredTasks.description}</p>
           <p>{filteredTasks.date.toLocaleDateString()}</p>
-          <button onClick={() => removeTask(index)}>Remove</button>
+          <button onClick={() => removeTask(index)}>
+                      <BsFillCheckCircleFill />
+                    </button>
+          </div>
       </li>
         ))}
       </ul>

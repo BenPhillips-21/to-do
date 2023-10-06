@@ -5,6 +5,27 @@
   text-align: center;
 }
 
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.10);
+  cursor: pointer;
+}
+
+#addTaskButton {
+  color: black;
+  padding: 50px;
+}
+
+#addTaskText {
+  font-size: 0.9rem;
+}
+
 .add-container {
   margin-top: 50px;
   margin-left: 350px;
@@ -17,31 +38,30 @@
 }
 
 .task-container {
-  border: solid 2px black;
+  /* border: solid 2px black; */
+  padding-left: 5px;
+  padding-right: 5px;
+  padding: 5px;
   border-radius: 1%;
   margin: 5px;
-  width: 350%;
   display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Align items to the left and right */
+  align-items: flex-start;
 }
+
+.task-container h5 {
+  font-weight: bold;
+  margin-bottom: -2px;
+}
+
+.task-container p {
+  margin-bottom: -2px;
+}
+
 
 .task-container:hover {
   background-color: #b6b5b5;
-}
-
-.titledesc-container {
-  width: 70%;
-  display: flex;
-  flex-direction: column;
-}
-
-.titledesc-container h5 {
-  width: 20%;
-  align-items: flex-start;
-}
-
-.titledesc-container p {
-  width: 60%;
-  align-items: flex-start;
 }
 
 h1 {
@@ -52,7 +72,6 @@ h1 {
 .list-container {
   margin-top: 10px;
   display: flex;
-  /* justify-content:first baseline; */
   width: 60%;
   margin-left: 350px;
 }
@@ -108,7 +127,7 @@ body {
   margin-bottom: -5px;
   border-radius: 5%;
   padding-left: 5px;
-  padding-right: 65px;
+  padding-right: 55px;
 }
 
 .row li:hover {

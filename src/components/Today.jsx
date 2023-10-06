@@ -1,18 +1,23 @@
 import React from 'react'
+import { BsFillCheckCircleFill, BsFillPlusCircleFill } from 'react-icons/bs';
 
 
 const Today = ({ taskList, removeTask }) => {
 
   const todayDate = new Date();
-  let target = todayDate.getDate()
-  console.log(target)
+  let targetDay = todayDate.getDate()
+  let targetMonth = todayDate.getMonth()
+  let targetYear = todayDate.getFullYear()
 
   const filteredTasks = taskList.filter((task) => {
     const taskDate = task.date
 
     const taskDay = taskDate.getDate()
+    const taskMonth = taskDate.getMonth()
+    const taskYear = taskDate.getFullYear()
 
-    return taskDay === target
+    const isToday = taskDay === targetDay && taskMonth === targetMonth && taskYear === targetYear
+    return isToday
   });
 
   console.log(filteredTasks);
@@ -22,14 +27,19 @@ const Today = ({ taskList, removeTask }) => {
 
 return (
   <>
+  <h1>Today</h1>
   <div className="list-container">
     <ul>
       {filteredTasks.map ((filteredTasks, index) => (
         <li key={index}>
+          <div className="task-container">
         <h3 >{filteredTasks.title}</h3>
         <p>{filteredTasks.description}</p>
         <p>{filteredTasks.date.toLocaleDateString()}</p>
-        <button onClick={() => removeTask(index)}>Remove</button>
+        <button onClick={() => removeTask(index)}>
+                      <BsFillCheckCircleFill />
+                    </button>
+        </div>
     </li>
       ))}
     </ul>
